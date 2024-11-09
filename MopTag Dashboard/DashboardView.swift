@@ -61,6 +61,10 @@ struct DashboardView: View {
             }
             header
         }
+        .task {
+            await viewModel.getMissingMops()
+//            await viewModel.getMopsInUse()
+        }
         .sheet(isPresented: $viewModel.presentingResetSheet) {
             viewModel.dismissResetSheet()
         } content: {
@@ -96,7 +100,12 @@ struct DashboardView: View {
             "Are you sure to end the shift?",
             isPresented: $viewModel.presentingEndShiftAlert) {
                 Button("End", role: .destructive) {
+                    Task {
+                        await viewModel.endShift()
+                        await viewModel.getMissingMops()
+//                        await viewModel.getMopsInUse()
 
+                    }
                 }
             }
     }
@@ -158,7 +167,7 @@ struct DashboardView: View {
         HStack(spacing: 32) {
             StatisticsCard(
                 name: "Mops currently in use",
-                value: "30",
+                value: "\(viewModel.mopsInUse?.count ?? 0)",
                 icon: "toilet",
                 color: .blue
             )
@@ -170,7 +179,7 @@ struct DashboardView: View {
             )
             StatisticsCard(
                 name: "Missing mops",
-                value: "19",
+                value: "\(viewModel.missingMops?.count ?? 0)",
                 icon: "exclamationmark.triangle",
                 color: .red
             )

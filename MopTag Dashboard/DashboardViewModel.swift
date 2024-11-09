@@ -15,6 +15,8 @@ class DashboardViewModel {
     @ObservationIgnored @Dependency(\.mopsRemoteRepository) private var mopsRemoteRepository
 
     var mops: [MopModel]?
+    var missingMops: [MopModel]?
+    var mopsInUse: [MopModel]?
     var presentingResetSheet: Bool = false
     var presentingEndShiftAlert: Bool = false
     var tagToReset: String?
@@ -50,6 +52,30 @@ class DashboardViewModel {
     func getAllMops() async {
         do {
             mops = try await mopsRemoteRepository.getAllMops()
+        } catch {
+            logger.logError(.general, error.localizedDescription)
+        }
+    }
+
+    func getMissingMops() async {
+        do {
+            missingMops = try await mopsRemoteRepository.getMissingMops()
+        } catch {
+            logger.logError(.general, error.localizedDescription)
+        }
+    }
+
+    func getMopsInUse() async {
+        do {
+            mopsInUse = try await mopsRemoteRepository.getMopsInUse()
+        } catch {
+            logger.logError(.general, error.localizedDescription)
+        }
+    }
+
+    func endShift() async {
+        do {
+            try await mopsRemoteRepository.endShift()
         } catch {
             logger.logError(.general, error.localizedDescription)
         }

@@ -13,6 +13,9 @@ import Foundation
 protocol MopsRemoteRepository {
     func getAllMops() async throws -> [MopModel]
     func getResettableTags() async throws -> [String]
+    func getMissingMops() async throws -> [MopModel]
+    func endShift() async throws
+    func getMopsInUse() async throws -> [MopModel]
 }
 
 struct MopsLiveRemoteRepository: MopsRemoteRepository {
@@ -54,10 +57,39 @@ struct MopsLiveRemoteRepository: MopsRemoteRepository {
             "\(environment.baseURL)/api/mops/missing/all",
             method: .get
         )
-        
+
         do {
-            let response = try await request.serializingDecodable([MopModel].self).value
-            return response
+            let response = try await request.serializingDecodable([MopDataModel].self).value
+            return try response.map { try $0.toModel() }
+        } catch {
+            logger.logError(.network, error.localizedDescription)
+            throw error
+        }
+    }
+
+    func getMopsInUse() async throws -> [MopModel] {
+        let request = AF.request(
+            "\(environment.baseURL)/api/tags/in_use",
+            method: .get
+        )
+
+        do {
+            let response = try await request.serializingDecodable([MopDataModel].self).value
+            return try response.map { try $0.toModel() }
+        } catch {
+            logger.logError(.network, error.localizedDescription)
+            throw error
+        }
+    }
+
+    func endShift() async throws {
+        let request = AF.request(
+            "\(environment.baseURL)/endshift",
+            method: .post
+        )
+
+        do {
+            let response = try await request.serializingDecodable(String.self).value
         } catch {
             logger.logError(.network, error.localizedDescription)
             throw error
