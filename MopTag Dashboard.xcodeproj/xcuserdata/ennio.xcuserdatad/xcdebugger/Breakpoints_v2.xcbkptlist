@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AA7DC347-4036-4DA6-9540-558C3B0414C0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF05E55C-0FF2-416A-9C7D-489DA22E8E17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MopTag Dashboard/RemoteRepository/MopsRemoteRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getAllMops()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FF05E55C-0FF2-416A-9C7D-489DA22E8E17 - d9b94a2aa2a59fb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for MopTag_Dashboard.MopsLiveRemoteRepository.getAllMops() async throws -&gt; Swift.Array&lt;MopTag_Dashboard.MopModel&gt;"
+                  moduleName = "MopTag Dashboard.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ennio/Documents/MopTag%20Dashboard/MopTag%20Dashboard/RemoteRepository/MopsRemoteRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+               <Location
+                  uuid = "FF05E55C-0FF2-416A-9C7D-489DA22E8E17 - f7432ba83c7171b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for MopTag_Dashboard.MopsLiveRemoteRepository.getAllMops() async throws -&gt; Swift.Array&lt;MopTag_Dashboard.MopModel&gt;"
+                  moduleName = "MopTag Dashboard.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ennio/Documents/MopTag%20Dashboard/MopTag%20Dashboard/RemoteRepository/MopsRemoteRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

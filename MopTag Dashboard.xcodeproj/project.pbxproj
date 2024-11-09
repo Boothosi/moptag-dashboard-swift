@@ -6,8 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		75210F082CDF426B00EA4A69 /* CommonLogging in Frameworks */ = {isa = PBXBuildFile; productRef = 75210F072CDF426B00EA4A69 /* CommonLogging */; };
+		75210F0B2CDF427C00EA4A69 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 75210F0A2CDF427C00EA4A69 /* Alamofire */; };
+		75210F0E2CDF429200EA4A69 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 75210F0D2CDF429200EA4A69 /* Dependencies */; };
+		75210F102CDF429200EA4A69 /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = 75210F0F2CDF429200EA4A69 /* DependenciesMacros */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		758D017B2CDF4898002B486E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75210EDB2CDF372A00EA4A69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75210EE22CDF372A00EA4A69;
+			remoteInfo = "MopTag Dashboard";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		75210EE32CDF372A00EA4A69 /* MopTag Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MopTag Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		758D016F2CDF461A002B486E /* Testing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Testing.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/Testing.framework; sourceTree = DEVELOPER_DIR; };
+		758D01772CDF4898002B486E /* MopTag DashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MopTag DashboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +35,26 @@
 			path = "MopTag Dashboard";
 			sourceTree = "<group>";
 		};
+		758D01782CDF4898002B486E /* MopTag DashboardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "MopTag DashboardTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		75210EE02CDF372A00EA4A69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75210F0E2CDF429200EA4A69 /* Dependencies in Frameworks */,
+				75210F082CDF426B00EA4A69 /* CommonLogging in Frameworks */,
+				75210F102CDF429200EA4A69 /* DependenciesMacros in Frameworks */,
+				75210F0B2CDF427C00EA4A69 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758D01742CDF4898002B486E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				75210EE52CDF372A00EA4A69 /* MopTag Dashboard */,
+				758D01782CDF4898002B486E /* MopTag DashboardTests */,
+				758D016E2CDF461A002B486E /* Frameworks */,
 				75210EE42CDF372A00EA4A69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +78,17 @@
 			isa = PBXGroup;
 			children = (
 				75210EE32CDF372A00EA4A69 /* MopTag Dashboard.app */,
+				758D01772CDF4898002B486E /* MopTag DashboardTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		758D016E2CDF461A002B486E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				758D016F2CDF461A002B486E /* Testing.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,10 +111,37 @@
 			);
 			name = "MopTag Dashboard";
 			packageProductDependencies = (
+				75210F072CDF426B00EA4A69 /* CommonLogging */,
+				75210F0A2CDF427C00EA4A69 /* Alamofire */,
+				75210F0D2CDF429200EA4A69 /* Dependencies */,
+				75210F0F2CDF429200EA4A69 /* DependenciesMacros */,
 			);
 			productName = "MopTag Dashboard";
 			productReference = 75210EE32CDF372A00EA4A69 /* MopTag Dashboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		758D01762CDF4898002B486E /* MopTag DashboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 758D017D2CDF4898002B486E /* Build configuration list for PBXNativeTarget "MopTag DashboardTests" */;
+			buildPhases = (
+				758D01732CDF4898002B486E /* Sources */,
+				758D01742CDF4898002B486E /* Frameworks */,
+				758D01752CDF4898002B486E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				758D017C2CDF4898002B486E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				758D01782CDF4898002B486E /* MopTag DashboardTests */,
+			);
+			name = "MopTag DashboardTests";
+			packageProductDependencies = (
+			);
+			productName = "MopTag DashboardTests";
+			productReference = 758D01772CDF4898002B486E /* MopTag DashboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +156,10 @@
 					75210EE22CDF372A00EA4A69 = {
 						CreatedOnToolsVersion = 16.1;
 					};
+					758D01762CDF4898002B486E = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 75210EE22CDF372A00EA4A69;
+					};
 				};
 			};
 			buildConfigurationList = 75210EDE2CDF372A00EA4A69 /* Build configuration list for PBXProject "MopTag Dashboard" */;
@@ -94,18 +171,31 @@
 			);
 			mainGroup = 75210EDA2CDF372A00EA4A69;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				75210F062CDF426B00EA4A69 /* XCRemoteSwiftPackageReference "common-logging-swift" */,
+				75210F092CDF427C00EA4A69 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				75210F0C2CDF429200EA4A69 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 75210EE42CDF372A00EA4A69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				75210EE22CDF372A00EA4A69 /* MopTag Dashboard */,
+				758D01762CDF4898002B486E /* MopTag DashboardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		75210EE12CDF372A00EA4A69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		758D01752CDF4898002B486E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +212,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		758D01732CDF4898002B486E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		758D017C2CDF4898002B486E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75210EE22CDF372A00EA4A69 /* MopTag Dashboard */;
+			targetProxy = 758D017B2CDF4898002B486E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		75210EEF2CDF372B00EA4A69 /* Debug */ = {
@@ -185,6 +290,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -240,6 +346,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -259,12 +366,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.boothosi.MopTag-Dashboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boothosi.moptag.dashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -287,16 +395,51 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.boothosi.MopTag-Dashboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boothosi.moptag.dashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		758D017E2CDF4898002B486E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boothosi.MopTag-DashboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MopTag Dashboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MopTag Dashboard";
+			};
+			name = Debug;
+		};
+		758D017F2CDF4898002B486E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boothosi.MopTag-DashboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MopTag Dashboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MopTag Dashboard";
 			};
 			name = Release;
 		};
@@ -321,7 +464,66 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		758D017D2CDF4898002B486E /* Build configuration list for PBXNativeTarget "MopTag DashboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				758D017E2CDF4898002B486E /* Debug */,
+				758D017F2CDF4898002B486E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75210F062CDF426B00EA4A69 /* XCRemoteSwiftPackageReference "common-logging-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/7Circle/common-logging-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		75210F092CDF427C00EA4A69 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+		75210F0C2CDF429200EA4A69 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = exactVersion;
+				version = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75210F072CDF426B00EA4A69 /* CommonLogging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75210F062CDF426B00EA4A69 /* XCRemoteSwiftPackageReference "common-logging-swift" */;
+			productName = CommonLogging;
+		};
+		75210F0A2CDF427C00EA4A69 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75210F092CDF427C00EA4A69 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		75210F0D2CDF429200EA4A69 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75210F0C2CDF429200EA4A69 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		75210F0F2CDF429200EA4A69 /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75210F0C2CDF429200EA4A69 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75210EDB2CDF372A00EA4A69 /* Project object */;
 }

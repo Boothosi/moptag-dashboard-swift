@@ -11,7 +11,7 @@ import SwiftUI
 struct MopTag_DashboardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
         }
     }
 }
